@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cajas Regalo Literarias</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navegación y Carrito -->
+    <nav class="navbar">
+        <div class="logo">
+            <h2>Cajas Literarias</h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#">Inicio</a></li>
+            <li><a href="#">Catálogo</a></li>
+            <li><a href="#">Cómo Funciona</a></li>
+            <li><a href="#">FAQ</a></li>
+        </ul>
+        <div class="cart-icon" id="cart-icon">
+            🛒 Mi Caja <span id="cart-badge">0</span>
+        </div>
+    </nav>
+
+    <main>
+        <section class="hero">
+            <h1>Protegemos tu sorpresa</h1>
+            <p>Elige tu género, indícanos tus preferencias y recibe una caja preparada con mimo. Libros sorpresa, accesorios y vasos personalizados.</p>
+        </section>
+
+        <section class="products" id="products-container">
+            <div class="loader">Cargando catálogo...</div>
+        </section>
+
+        <!-- Modal de Configuración del Producto (Fase 1 Mejorada) -->
+        <div id="purchase-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="close-modal">&times;</span>
+                <h2 id="modal-title">Configura tu pedido</h2>
+                
+                <form id="purchase-form">
+                    <input type="hidden" id="selected-product-id">
+                    
+                    <div id="caja-options" class="form-section hidden">
+                        <h3>1. Tu Libro Sorpresa</h3>
+                        <label for="genero">Género Literario:</label>
+                        <select id="genero" name="genero"></select>
+
+                        <label for="tematica">Temática u ocasión:</label>
+                        <select id="tematica" name="tematica"></select>
+
+                        <label for="exclusiones">Libros que ya tienes (Lista de seguridad, máx 5):</label>
+                        <textarea id="exclusiones" name="exclusiones" placeholder="Ej: Harry Potter, El nombre del viento..."></textarea>
+                    </div>
+
+                    <div id="vaso-options" class="form-section hidden">
+                        <h3>2. Tu Vaso Personalizado</h3>
+                        <label for="diseno_vaso">Diseño del vaso:</label>
+                        <select id="diseno_vaso" name="diseno_vaso"></select>
+                        
+                        <label for="texto_vaso">Texto personalizado (Opcional):</label>
+                        <input type="text" id="texto_vaso" name="texto_vaso" placeholder="Ej: Nombre o inicial">
+                    </div>
+
+                    <div class="form-footer">
+                        <div class="price-summary">Total: <span id="modal-price">0.00</span>€</div>
+                        <button type="submit" class="btn-primary">Añadir al Carrito</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <!-- Panel Lateral del Carrito (Fase 2) -->
+        <div id="cart-sidebar" class="cart-sidebar">
+            <div class="cart-header">
+                <h2>Tu Carrito</h2>
+                <span class="close-btn" id="close-cart">&times;</span>
+            </div>
+            <div id="cart-items" class="cart-items">
+                <!-- Se inyectan productos con JS -->
+            </div>
+            <div class="cart-footer">
+                <h3>Total: <span id="cart-total">0.00</span>€</h3>
+                <button id="btn-checkout" class="btn-primary" disabled>Proceder al Pago</button>
+            </div>
+        </div>
+
+        <!-- Modal de Checkout Simulado (Fase 2) -->
+        <div id="checkout-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close-btn" id="close-checkout">&times;</span>
+                <h2>Datos de Envío y Pago</h2>
+                <form id="checkout-form">
+                    <div class="form-section">
+                        <label for="cliente_nombre">Nombre Completo:</label>
+                        <input type="text" id="cliente_nombre" required>
+
+                        <label for="cliente_email">Correo Electrónico (Para el historial):</label>
+                        <input type="email" id="cliente_email" required>
+
+                        <label for="cliente_direccion">Dirección de Envío:</label>
+                        <textarea id="cliente_direccion" required></textarea>
+                    </div>
+                    <div class="form-footer">
+                        <button type="submit" class="btn-primary">Simular Pago Seguro</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+
+    <!-- Overlay oscuro para el sidebar -->
+    <div id="overlay" class="overlay hidden"></div>
+
+    <script src="app.js"></script>
+</body>
+</html>

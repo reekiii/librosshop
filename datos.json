@@ -1,0 +1,65 @@
+{
+  "productos": [
+    {
+      "id": "pack_libro",
+      "nombre": "Pack Libro",
+      "descripcion": "1 libro sorpresa + accesorios literarios. Descubre tu próxima historia.",
+      "precio": 24.90,
+      "tipo": "caja",
+      "incluye_vaso": false
+    },
+    {
+      "id": "pack_libro_vaso",
+      "nombre": "Pack Libro + Vaso",
+      "descripcion": "1 libro sorpresa + vaso personalizado + accesorios. Una historia para descubrir y un vaso para disfrutarla.",
+      "precio": 34.90,
+      "tipo": "caja",
+      "incluye_vaso": true
+    },
+    {
+      "id": "pack_duo",
+      "nombre": "Pack Dúo",
+      "descripcion": "2 libros sorpresa + 2 vasos personalizados + accesorios. Dos historias para compartir.",
+      "precio": 59.90,
+      "tipo": "caja",
+      "incluye_vaso": true,
+      "multiplicador": 2
+    },
+    {
+      "id": "vaso_personalizado",
+      "nombre": "Vaso Personalizado + Accesorios",
+      "descripcion": "1 vaso personalizado + accesorios. Un regalo personalizado sin libro.",
+      "precio": 15.90,
+      "tipo": "vaso",
+      "incluye_vaso": true
+    }
+  ],
+  "generos": [
+    "Romance",
+    "Thriller / Suspense",
+    "Misterio / Novela negra",
+    "Fantasía",
+    "Contemporánea / Feel-good",
+    "Histórica",
+    "Juvenil / YA",
+    "Ciencia ficción"
+  ],
+  "tematicas": [
+    "Sin temática específica",
+    "Cozy",
+    "Café",
+    "Viajes",
+    "Dark Academia",
+    "Navidad",
+    "Halloween",
+    "Verano",
+    "San Valentín"
+  ],
+  "disenos_vaso": [
+    "Diseño Floral",
+    "Cita Literaria Clásica",
+    "Constelaciones",
+    "Minimalista con Inicial",
+    "Diseño Otoñal"
+  ]
+}
