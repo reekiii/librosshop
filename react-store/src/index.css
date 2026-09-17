@@ -42,7 +42,7 @@ button, input, select, textarea, .nav-links a { font-family: var(--font-sans); }
 .cart-icon { position: relative; cursor: pointer; display: flex; align-items: center; gap: 0.5rem; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; font-weight: 500;}
 .cart-badge { position: absolute; top: -10px; right: -15px; background-color: var(--accent-rose); color: white; font-size: 0.7rem; width: 18px; height: 18px; display: flex; align-items: center; justify-content: center; border-radius: 50%; font-family: var(--font-sans);}
 
-.hero { background-size: cover; background-position: center; padding: 10rem 2rem; text-align: center; position: relative; display: flex; align-items: center; justify-content: center; min-height: 80vh; }
+.hero { background-size: cover; background-position: center bottom; padding: 8rem 2rem 2rem; text-align: center; position: relative; display: flex; align-items: flex-start; justify-content: center; min-height: 85vh; }
 .hero-content { position: relative; z-index: 2; max-width: 800px; padding: 3rem; }
 .hero-subtitle { display: block; font-family: var(--font-sans); text-transform: uppercase; letter-spacing: 3px; font-size: 0.9rem; margin-bottom: 1.5rem; color: var(--bg-cream); }
 .hero h1 { font-size: 4rem; margin-bottom: 1.5rem; color: #fff; letter-spacing: 1px; text-shadow: 0 2px 10px rgba(0,0,0,0.3);}

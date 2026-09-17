@@ -8,7 +8,7 @@ export default function Home({ catalog, onSelectProduct }) {
         <div className="home-page">
             {/* 1. HERO (EL GANCHO) */}
             <section className="hero" style={{
-                backgroundImage: `linear-gradient(rgba(44, 40, 37, 0.3), rgba(44, 40, 37, 0.6)), url('https://images.unsplash.com/photo-1476275466078-4007374efbbe?auto=format&fit=crop&w=1920&q=80')`
+                backgroundImage: `linear-gradient(rgba(44, 40, 37, 0.4), rgba(44, 40, 37, 0.7)), url('/hero-background.jpg')`
             }}>
                 <div className="hero-content">
                     <span className="hero-subtitle">Una experiencia a tu medida</span>
